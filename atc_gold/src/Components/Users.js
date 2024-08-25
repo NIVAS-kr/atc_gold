@@ -6,14 +6,14 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/users')
+    fetch('https://atc-gold-backend.onrender.com/users')
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.error('Error fetching users:', error));
   }, []);
 
   const handleRemoveUser = (username) => {
-    fetch(`http://localhost:5000/${username}`, {
+    fetch(`https://atc-gold-backend.onrender.com/${username}`, {
       method: 'DELETE',
     })
       .then(() => {
