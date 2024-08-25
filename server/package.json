@@ -30,12 +30,13 @@
     "mongoose": "^8.5.4",
     "mysql2": "^3.11.0",
     "ping": "^0.4.4",
-    "socket.io": "^4.7.5",
-    "ws": "^8.18.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "socket.io": "^4.7.5",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint": "^8.40.0",
     "prettier": "^2.8.8",
     "react-scripts": "5.0.1"
