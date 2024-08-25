@@ -11,7 +11,7 @@ const Ipaddress = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/devices');
+        const response = await fetch('https://atc-gold-backend.onrender.com/devices');
         if (!response.ok) {
           throw new Error('Network response was not ok ' + response.statusText);
         }
