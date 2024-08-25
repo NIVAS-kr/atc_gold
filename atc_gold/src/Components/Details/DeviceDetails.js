@@ -13,7 +13,7 @@ const DeviceDetails = () => {
   useEffect(() => {
     const fetchDeviceDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/devices`);
+        const response = await fetch(`https://atc-gold-backend.onrender.com/devices`);
         if (!response.ok) {
           throw new Error('Network response was not ok ' + response.statusText);
         }
@@ -27,7 +27,7 @@ const DeviceDetails = () => {
 
     fetchDeviceDetails();
 
-    const socket = new WebSocket('ws://localhost:5001');
+    const socket = new WebSocket('wss://atc-gold-backend.onrender.com');
     socket.onopen = () => console.log('WebSocket connection established');
     socket.onmessage = (event) => {
       const updatedDevices = JSON.parse(event.data);
