@@ -9,13 +9,18 @@ const connectDB = require('./db'); // Import MongoDB connection
 const User = require('./models/User'); // Import User model
 const Device = require('./models/devices');
 const app = express();
-const port = process.env.PORT || 5000; // Use environment variable PORT or default to 5000
-const wss = new WebSocket.Server({ port: 5001 }); // WebSocket server
+const port = process.env.PORT || 5003; // Use environment variable PORT or default to 5000
+const wsPort = process.env.WS_PORT || 5002; // Use environment variable WS_PORT or default to 5001
 
+// Initialize WebSocket server with the specified port
+const wss = new WebSocket.Server({ port: wsPort });
+
+// Middleware setup
 app.use(cors());
 app.use(bodyParser.json());
 
-connectDB(); // Connect to MongoDB
+// Connect to MongoDB
+connectDB();
 
 // Function to initialize admin user
 const initializeAdminUser = async () => {
@@ -211,6 +216,7 @@ app.delete('/remove-user/:username', async (req, res) => {
     res.status(500).json({ error: 'Error removing user' });
   }
 });
+
 app.get('/', (req, res) => {
   res.send('Backend is running!');
 });
