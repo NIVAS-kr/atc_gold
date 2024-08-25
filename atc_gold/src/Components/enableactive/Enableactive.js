@@ -35,7 +35,7 @@ const Enableactive = () => {
 
   const fetchDeviceStates = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/device-states');
+      const response = await axios.get('https://atc-gold-backend.onrender.com/device-states');
       setDeviceStates(response.data);
     } catch (error) {
       console.error('Error fetching device states:', error);
@@ -46,7 +46,7 @@ const Enableactive = () => {
     fetchDeviceStates();
 
     // Setup WebSocket for real-time updates
-    const socket = new WebSocket('ws://localhost:5001');
+    const socket = new WebSocket('wss://atc-gold-backend.onrender.com');
     
     socket.onmessage = (event) => {
       const updatedDevices = JSON.parse(event.data);
