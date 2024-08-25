@@ -1,0 +1,84 @@
+.device-details-container {
+  padding: 20px;
+  max-width: 1200px; /* Set a max-width for a more centered layout */
+  margin: 0 auto;
+  color: #333; /* Darker text color for better readability */
+  font-family: Arial, sans-serif; /* Professional font */
+}
+
+.deviceh2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  /* Blue underline for the header */
+  padding-bottom: 10px;
+}
+
+.deviceh3 {
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+ /* Blue underline for the header */
+  padding-bottom: 10px;
+}
+
+.device-details-table,
+.status-history-table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders between rows collapse */
+  margin-bottom: 40px; /* Space below the table */
+}
+
+.device-details-table th,
+.status-history-table th,
+.device-details-table td,
+.status-history-table td {
+  padding: 12px; /* Increased padding for better spacing */
+  border: 1px solid #ddd; /* Light border for table cells */
+  text-align: left; /* Align text to the left */
+  font-size: 16px; /* Slightly larger font size for readability */
+}
+
+.device-details-table th,
+.status-history-table th {
+  background-color: #f4f4f4; /* Light grey background for headers */
+  font-weight: bold; /* Bold headers */
+  color: #007bff; /* Blue color for headers */
+}
+
+.device-details-table tr:nth-child(even),
+.status-history-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternate row color */
+}
+
+.device-details-table td,
+.status-history-table td {
+  vertical-align: top; /* Align the content at the top of the cell */
+}
+
+.timestamp-duration {
+  display: flex;
+  flex-direction: column; /* Align timestamp and duration vertically */
+}
+
+.timestamp {
+  margin-bottom: 5px; /* Space between timestamp and duration */
+}
+
+.duration {
+  color: #555; /* Slightly darker color for duration */
+}
+
+.devicebutton {
+  padding: 10px 20px; /* Padding for better button size */
+  border: none;
+  background-color: #007bff; /* Blue background for button */
+  color: #fff; /* White text color */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.devicebutton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

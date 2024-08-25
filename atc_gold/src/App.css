@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+}
+
+body {
+  margin: 0;
+ 
+   font-size:18px;
+  
+}
+
+html {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+ 
+}

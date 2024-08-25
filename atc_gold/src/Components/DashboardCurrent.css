@@ -1,0 +1,16 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  grid-template-rows: repeat(2, 1fr); /* Two equal rows */
+ 
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box;
+  gap:10px; /* Include padding and border in the element's total width and height */
+}
+
+.dashboard-item, .enable-item, .networkcoverage-item {
+  border: 1px solid #ccc; 
+ 
+  box-sizing: border-box; 
+}

@@ -1,0 +1,107 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styles */
+.page-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Navbar styles */
+.page-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #4e4f50;
+  color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.page-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.page-close-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.page-close-icon:hover {
+  color: #ff4d4d;
+}
+
+/* Content styles */
+.page-content {
+  padding: 20px;
+}
+
+.page-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.page-content p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Input styles */
+.page-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.page-input:focus {
+  border-color: #4e4f50;
+  outline: none;
+}
+
+/* Button styles */
+.page-next-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4e4f50;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.page-next-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.page-next-button:hover:not(:disabled) {
+  background-color: #3c3d3e;
+}
+
+/* Error message styles */
+.error-message {
+  background-color: #ffdddd;
+  color: #d8000c;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #d8000c;
+  border-radius: 4px;
+}
