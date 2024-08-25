@@ -18,7 +18,7 @@ const AddDevicePage = ({ onAddDevice }) => {
   const handleAddIp = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.post('http://localhost:5000/add-ip', { ipAddress, hostname, device });
+      const response = await axios.post('https://atc-gold-backend.onrender.com/add-ip', { ipAddress, hostname, device });
       if (typeof onAddDevice === 'function') {
         onAddDevice(response.data); // Pass updated device list
       }
@@ -42,7 +42,7 @@ const AddDevicePage = ({ onAddDevice }) => {
           try {
             setIsLoading(true);
             await Promise.all(devices.map(device => {
-              return axios.post('http://localhost:5000/add-ip', {
+              return axios.post('https://atc-gold-backend.onrender.com/add-ip', {
                 ipAddress: device[0],
                 hostname: device[1],
                 device: device[2]
