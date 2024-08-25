@@ -11,7 +11,7 @@ const MyNetworkPage = () => {
   useEffect(() => {
     const fetchDevices = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/devices');
+        const response = await axios.get('https://atc-gold-backend.onrender.com/devices');
         setDevices(response.data);
       } catch (error) {
         console.error('Error fetching devices:', error);
@@ -20,7 +20,7 @@ const MyNetworkPage = () => {
 
     fetchDevices(); // Initial fetch
 
-    const socket = new WebSocket('ws://localhost:5001');
+    const socket = new WebSocket('wss://atc-gold-backend.onrender.com');
     
     socket.onmessage = (event) => {
       const updatedDevices = JSON.parse(event.data);
