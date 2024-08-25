@@ -9,7 +9,7 @@ const connectDB = require('./db'); // Import MongoDB connection
 const User = require('./models/User'); // Import User model
 const Device = require('./models/devices');
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000; // Use environment variable PORT or default to 5000
 const wss = new WebSocket.Server({ port: 5001 }); // WebSocket server
 
 app.use(cors());
