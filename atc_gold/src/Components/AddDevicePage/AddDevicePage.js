@@ -11,7 +11,6 @@ const AddDevicePage = ({ onAddDevice }) => {
   const [device, setDevice] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [file, setFile] = useState(null);
 
   const navigate = useNavigate();
 
@@ -33,7 +32,6 @@ const AddDevicePage = ({ onAddDevice }) => {
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
-    setFile(file);
 
     if (file) {
       Papa.parse(file, {

@@ -1,10 +1,17 @@
 {
   "name": "ping-checker",
   "version": "1.0.0",
-  "description": "",
+  "description": "A project for checking pings and managing devices.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "build": "react-scripts build",
+    "start:client": "react-scripts start",
+    "start:server": "node index.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -24,6 +31,13 @@
     "mysql2": "^3.11.0",
     "ping": "^0.4.4",
     "socket.io": "^4.7.5",
-    "ws": "^8.18.0"
+    "ws": "^8.18.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "prettier": "^2.8.8",
+    "react-scripts": "5.0.1"
   }
 }
