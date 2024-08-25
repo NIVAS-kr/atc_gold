@@ -211,6 +211,9 @@ app.delete('/remove-user/:username', async (req, res) => {
     res.status(500).json({ error: 'Error removing user' });
   }
 });
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
 
 // Initialize the admin user and start the server
 const startServer = async () => {
