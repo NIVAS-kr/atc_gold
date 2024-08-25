@@ -14,7 +14,7 @@ const Login = ({ onLogin }) => {
     setError(''); // Clear previous errors
     try {
       // Send username and password to the backend
-      const response = await axios.post('http://localhost:5000/login', { username, password });
+      const response = await axios.post('https://atc-gold-backend.onrender.com/login', { username, password });
   
       if (response.status === 200) {
         onLogin(true); 
