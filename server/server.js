@@ -14,7 +14,7 @@ const wsPort = process.env.WS_PORT || 5002; // Use environment variable WS_PORT 
 
 // Initialize WebSocket server with the specified port
 const wss = new WebSocket.Server({ port: wsPort });
-const path = require("path");
+
 
 // Middleware setup
 app.use(cors());
@@ -22,23 +22,7 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 connectDB();
-const  __dirname1=path.resolve();
-if(process.env.NODE_ENV==='production'){
-  app.use(express.static(path.join(__dirname1,"/atc_gold/build")));
 
-
-  app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname1,"atc_gold","build","index.html"));
-    
-  });
-
-}
-else{
-  app.get("/",(req,res)=>{
-    res.send("api is running successfully");
-  })
-
-}
 
 // Function to initialize admin user
 const initializeAdminUser = async () => {
@@ -236,7 +220,7 @@ app.delete('/remove-user/:username', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Backend is running because its command to run which is given by atc!');
+  res.send('Backend is running! why its given command by atc');
 });
 
 // Initialize the admin user and start the server
