@@ -160,7 +160,7 @@ app.post('/login', async (req, res) => {
 });
 
 // Get device statuses
-app.get('/devices', (req, res) => {
+app.get('/device-states', (req, res) => {
   res.status(200).json(devices); // Ensure success response
 });
 
