@@ -160,8 +160,9 @@ app.post('/login', async (req, res) => {
 });
 
 // Get device statuses
-app.get('/device-states', (req, res) => {
-  res.status(200).json(devices); // Ensure success response
+app.get('/device-states', async (req, res) => {
+  const devices = await Device.find();
+  res.status(200).json(devices); // Ensure success response
 });
 
 // Add new user endpoint
